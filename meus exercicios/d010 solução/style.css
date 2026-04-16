@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+/*@import*/
+
+/*@font-face*/
+
+:root { /* Arvore de cores e estilos do site */
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrão: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--cor5);
+}
+
+a.externo::after { /* ::after é em frente aos links */
+    content: '\00A0\1F517'; /* para o que vai conter após o link */
+}
+
+nav {
+
+}
+
+nav > a {
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s; /* Transição da ação */
+}
+
+nav > a:hover {
+    background-color: var(--cor3);
+    color: var(--cor5); /* Contraste */
+}
+
+main img {
+    display: block; /* A imagem não é um bloco, para centralizar com margin-auto deve-se colocar display: block; */
+    width: 100%; /* Para a imagem se adaptar a tela */
+}
+
+main p { /* Significa que todos os "p" idependente de estar em um article ou não sera mudado também */
+    background-image: linear-gradient(to right, var(--cor0), transparent); /* Faz com que vá de uma cor até o transparente */
+
+}
+
+div.video { /* Para modificar o video, ela deve estar dentro de uma div (caixa) */
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 58%; /* Para Retirar o preto do video */
+    position: relative; /* Para ser possivel as modificações de espaço */
+}
+
+div.video > iframe {
+    position: absolute; /* Para poder ser feito as modificações */
+    top: 5%; /* Canto superior em relação a ponta */
+    left: 5%; /* Canto Lateral */
+    width: 90%; /* Tamanho video */
+    height: 90%; 
+}
+
+aside > ul {
+    list-style-type: '\2714\00A0\00A0'; /* Para possuir o emoji de verificação e para ter o espaço de separação (não compativel com todos os navegadores) */
+    list-style-position: inside; /* Para a listar estar dentro do background-color */
+    columns: 2; /* Qnt de Colunas que terá a lista */
+}
+
+aside > h3 {
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /* Para fazer crescer a borda pra fora, fazendo sentido o bloco */
+    border-radius: 10px 10px 0px 0px; 
+}

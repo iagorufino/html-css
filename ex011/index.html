@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Teste abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua a tela do navegador</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Foto Flexivel">
+    </picture> <!-- Picture é dizer que será colocado uma imagem / media "max" é dizer o máximo da dimensão até trocar a imagem / srcset é o caminho da imagem / type é o tipo (png)-->
+    <h1>Reproduzindo aúdio</h1>
+    <p>Vamos aprender a reproduzir aúdios em HTML5</p>
+
+    <audio preload="metadata" autoplay controls loop > <!-- Metadata significa carregar algumas informações / autoplay é começar a musica quando abrir o site / controls é para aparecer a opção de clicar na musica / loop é para a música ficar em loop -->
+        <source src="midia/Intergalactic - Alex Jones _ Xander Jones.mp3" type="audio/mpeg"> <!-- src é para audios / mpeg é do mp3 (existe /ogg e /wav não recomendado) -->
+        <source src="midia/Intergalactic - Alex Jones _ Xander Jones.ogg" type="audio/ogg">
+        <source src="midia/Intergalactic - Alex Jones _ Xander Jones.wav" type="audio/wav"> <!-- Source é ordem para o navegador saber qual aúdio tentar primeiro em cada navegador -->
+        <p>Infelizmente seu navegador não consegue reproduzir aúdio. <a href="midia/Intergalactic - Alex Jones _ Xander Jones.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+
+    </audio>
+</body>
+</html>
