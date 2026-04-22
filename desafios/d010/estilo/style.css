@@ -23,7 +23,8 @@ body {
 header {
     background-image: linear-gradient(#38C979, #154b2d);
     color: white;
-    padding: 16px 0px 2px 0px ;
+    padding: 16px 0px 2px 0px;
+    margin: auto;
 }
 
 nav > a {
